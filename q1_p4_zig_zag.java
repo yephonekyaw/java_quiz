@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class q1_p4_zig_zag {
 
     // zig zag traversing algorithm
-    // I suggest you to trace how this algorithm works with pen & paper
+    // I suggest you trace how this algorithm works with pen & paper
     // some parts can only be visualized with pen & paper
     static int[][] zig_zag(int row, int col) {
         int[][] zig_zag_mat = new int[row][col];
@@ -18,10 +18,10 @@ public class q1_p4_zig_zag {
         index++;
         y++;
 
-        // we will run the while loop until x reachs the last row index and y reaches
+        // we will run the while loop until x reaches the last row index and y reaches
         // the last col index
         while (x != row - 1 || y != col - 1) {
-            // there are two cases to consider and each case has two seperate scenarios
+            // there are two cases to consider and each case has two separate scenarios
             // first if x is 0 or y is col - 1, the pattern will go downward
             if (x == 0 || y == col - 1) {
                 while (y >= 0 && x < row) {
@@ -59,7 +59,7 @@ public class q1_p4_zig_zag {
             }
         }
 
-        // finall insert into the last index
+        // finally insert into the last index
         zig_zag_mat[row - 1][col - 1] = index;
 
         return zig_zag_mat;
